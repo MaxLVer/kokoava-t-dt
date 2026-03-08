@@ -12,7 +12,10 @@ function createGameCard(game) {
                 onclick="openGameDetails(${game.id})"
                 style="cursor:pointer">
 
-                <img src="${game.background_image}" class="card-img-top">
+                <img 
+                src="${game.background_image || 'assets/img/placeholder.jpg'}"
+                class="card-img-top"
+                alt="Cover image of the video game ${game.name}">
 
                     <div class="card-body">
 
