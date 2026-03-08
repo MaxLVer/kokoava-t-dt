@@ -40,17 +40,22 @@ function fetchGames() {
     if (!container) return;
 
     // Haetaan pelejä API:sta
-    fetch(`https://api.rawg.io/api/games?key=${apiKey}&page_size=18`)
-        .then(res => res.json())
-        .then(data => {
+    try {
+        container.innerHTML = "Loading...";
+        fetch(`https://api.rawg.io/api/games?key=${apiKey}&page_size=18`)
+            .then(res => res.json())
+            .then(data => {
 
-            container.innerHTML = "";
+                container.innerHTML = "";
 
-            data.results.forEach(game => {
-                container.innerHTML += createGameCard(game);
-            });
+                data.results.forEach(game => {
+                    container.innerHTML += createGameCard(game);
+                });
 
-        });
+            })
+    } catch (error) {
+        console.error("Pelien haussa tapahtui virhe:", error);
+    }
 }
 
 
@@ -101,17 +106,18 @@ function setupSearch() {
 function openGameDetails(gameId) {
 
     // Haetaan pelin tiedot API:sta ID:n perusteella, kun korttia klikataan
-    fetch(`https://api.rawg.io/api/games/${gameId}?key=${apiKey}`)
-        .then(res => res.json())
-        .then(game => {
+    try {
+        fetch(`https://api.rawg.io/api/games/${gameId}?key=${apiKey}`)
+            .then(res => res.json())
+            .then(game => {
 
-            document.getElementById("modal-title").innerText = game.name;
+                document.getElementById("modal-title").innerText = game.name;
 
-            // Muodostetaan genre-lista, joka näytetään modaalissa
-            const genres = game.genres.map(g => g.name).join(", ");
+                // Muodostetaan genre-lista, joka näytetään modaalissa
+                const genres = game.genres.map(g => g.name).join(", ");
 
-            // Asetetaan modaalin sisältö pelin tiedoilla, kuten kuva, julkaisupäivä, arvosana, genret ja kuvaus.
-            document.getElementById("modal-body").innerHTML = `
+                // Asetetaan modaalin sisältö pelin tiedoilla, kuten kuva, julkaisupäivä, arvosana, genret ja kuvaus.
+                document.getElementById("modal-body").innerHTML = `
 
                 <img src="${game.background_image}" 
                 class="img-fluid mb-3 rounded">
@@ -127,10 +133,14 @@ function openGameDetails(gameId) {
                 `;
 
                 // Näytetään modaalin, kun tiedot on asetettu
-            const modal = new bootstrap.Modal(document.getElementById("gameModal"));
-            modal.show();
+                const modal = new bootstrap.Modal(document.getElementById("gameModal"));
+                modal.show();
 
-        });
+            });
+
+    } catch (error) {
+        console.error("Pelien haussa tapahtui virhe:", error);
+    }
 
 }
 
