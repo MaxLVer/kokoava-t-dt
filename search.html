@@ -12,25 +12,25 @@
 
 <!-- Pelin tiedot modalissa, lähde https://www.w3schools.com/howto/howto_css_modals.asp -->
 <div class="modal fade" id="gameModal" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content bg-dark text-light">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
 
-      <div class="modal-header border-secondary">
-        <h5 class="modal-title" id="modal-title">Game title</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-      </div>
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" id="modal-title">Game title</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
 
-      <div class="modal-body" id="modal-body">
-        Loading...
-      </div>
+            <div class="modal-body" id="modal-body">
+                Loading...
+            </div>
 
+        </div>
     </div>
-  </div>
 </div>
 
 <body class="text-light">
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR, otettu aikaisemmista tehtävistä mallia -->
     <nav class="navbar navbar-expand-sm navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand fw-semibold" href="index.html">Game Library</a>
@@ -53,21 +53,16 @@
 
         <h1>Search Games</h1>
 
-        <input
-        type="text"
-        id="search-input"
-        class="form-control mb-4"
-        placeholder="Search for a game..."
-        >
+        <input type="text" id="search-input" class="form-control mb-4" placeholder="Search for a game...">
 
         <div class="row g-4" id="search-results"></div>
 
-        </div>
+    </div>
 
-        <!-- JS koodit omassa tiedostossaan niin ei tule liikaa bloattia -->
-    <script src="assets/games.js"></script> 
+    <!-- JS koodit omassa tiedostossaan niin ei tule liikaa bloattia sivuille -->
+    <script src="assets/games.js"></script>
 
-        <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="text-center py-4">
         <p>&copy; 2026 Game Library. Powered by RAWG API.</p>
         <p><a href="https://rawg.io" target="_blank" class="text-decoration-none">API</a></p>

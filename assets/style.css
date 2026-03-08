@@ -86,6 +86,11 @@ background-size: 70% 70%;
 box-shadow:0 8px 10px #000000;
 }
 
+#intro {
+max-width: 800px;
+margin: auto;
+}
+
 /**========== KORTIT ========== */
 
 /* pelikortit ja niille animaatiot */
