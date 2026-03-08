@@ -157,10 +157,17 @@ padding-top: 60px;
 /* otsikko */
 
 #haku h1 {
-color: #c084fc;
+color: #f0e2fd;
 font-weight: 700;
 text-align: center;
 margin-bottom: 30px;
+}
+
+#haku h2 {
+color: #f0e2fd;
+font-weight: 400;
+text-align: center;
+margin-bottom: 20px;
 }
 
 /* hakukenttä */

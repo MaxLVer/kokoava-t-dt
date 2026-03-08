@@ -19,7 +19,7 @@ function createGameCard(game) {
 
                     <div class="card-body">
 
-                        <h5 class="card-title">${game.name}</h5>
+                        <h3 class="card-title">${game.name}</h5>
 
                         <p class="card-text">
                         Release: ${game.released || "N/A"}
