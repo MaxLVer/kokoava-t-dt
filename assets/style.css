@@ -122,7 +122,7 @@ background:#7c3aed;
 font-size:0.8rem;
 }
 
-/* footer */
+/*========== FOOTER ==========*/
 
 footer{
 background:#140a24;
@@ -131,6 +131,19 @@ margin-top:60px;
 position: sticky;
 top: 100%;
 width: 100%;
+}
+
+/* footerin linkit */
+footer a{
+color:#c084fc;
+font-weight:600;
+text-decoration:none;
+transition:0.2s;
+}
+
+footer a:hover{
+color:#ffffff;
+text-shadow:0 0 6px #a855f7;
 }
 
 /*========== HAKUSIVU =========*/
