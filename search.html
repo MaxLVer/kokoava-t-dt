@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="fi">
+
 <head>
     <meta charset="utf-8">
     <title>Search Games</title>
@@ -17,7 +20,7 @@
 
             <div class="modal-header border-secondary">
                 <h5 class="modal-title" id="modal-title">Game title</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Exit Modal Window"></button>
             </div>
 
             <div class="modal-body" id="modal-body">
@@ -36,7 +39,7 @@
             <a class="navbar-brand fw-semibold" href="index.html">Game Library</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"
-                aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Avaa valikko">
+                aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Open navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -56,7 +59,7 @@
 
         <h2>Start by typing the name of a game:</h2>
 
-        <input type="text" id="search-input" class="form-control mb-4" placeholder="Search for a game...">
+        <input type="text" id="search-input" class="form-control mb-4" placeholder="Search for a game..." aria-label="Input field for searching games by name">
 
         <!-- Hakutulokset renderöidään tähän elementtiin, sama kuin etusivulla -->
         <div class="row g-4" id="search-results"></div>
